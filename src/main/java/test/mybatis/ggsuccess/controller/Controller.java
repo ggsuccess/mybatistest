@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import test.mybatis.ggsuccess.entity.Idolgroup;
+import test.mybatis.ggsuccess.entity.Members;
 import test.mybatis.ggsuccess.mapper.GroupMapper;
 
 import java.util.List;
@@ -22,5 +23,10 @@ public class Controller {
     @GetMapping("/group")
     public List<Idolgroup> getAll() {
         return groupMapper.getAll();
+    }
+
+    @GetMapping("/members")
+    public List<Members> getMemberList() {
+        return groupMapper.getAllMember();
     }
 }
