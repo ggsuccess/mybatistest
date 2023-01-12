@@ -17,7 +17,7 @@ public class Controller {
 
     @GetMapping("/")
     public String respo() {
-        return "hello ";
+        return "hello ㅇㅇ";
     }
 
     @GetMapping("/group")
